@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+  }
+  
+  .custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .custom-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+  }
+  
+  .custom-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .custom-checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  .custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .custom-checkbox .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  /* Hamburger Icon */
+.hamburger {
+  display: block;
+  width: 30px;
+  height: 1px;
+  margin: 1px 0;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+  transform: translateY(-10px);
+}
+
+.hamburger::after {
+  transform: translateY(7px);
+}
+
+/* Show and hide menu */
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.active {
+  opacity: 1;
+  scale: 1.1;
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .nav-link:hover, .active {
+    opacity: 1;
+    scale: 1.1;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
