@@ -4,7 +4,8 @@
 
 This project is a web application built with React, Express.js, and MongoDB. It includes features such as student management, attendance tracking, and dynamic authentication.
 
-![Manager UI](https://cdn.discordapp.com/attachments/1139766657938628688/1205248919676657714/Screenshot_2024-02-08_145718.png?ex=65d7ae86&is=65c53986&hm=a384baa42a6ed979c012a5bd15976c681886747141436a6619ec9c0f1fc0d448&)
+Live Demo (User: 1,Password: 1)
+https://rthmanager.netlify.app/
 
 ## Features
 
